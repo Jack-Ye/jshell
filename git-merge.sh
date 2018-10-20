@@ -3,7 +3,7 @@
 
 br=`git branch | grep "*"`
 current=${br/* /}
-target=$0
+target=$1
 
 echo "====1. 合并master分支到${current}分支===="
 
