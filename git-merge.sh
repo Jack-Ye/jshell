@@ -2,16 +2,17 @@
 #!/bin/bash
 
 br=`git branch | grep "*"`
-echo ${br/* /}
+current=${br/* /}
+echo ${current}
 
 git pull origin master
 
-git push origin ${br}
+git push origin ${current}
 
 git checkout dev
 
-git merge ${br}
+git merge ${current}
 
 git push origin dev
 
-git checkout ${br}
+git checkout ${current}
