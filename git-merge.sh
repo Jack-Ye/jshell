@@ -17,14 +17,18 @@ echo "\n\n====3. 切换到${target}分支===="
 
 git checkout ${target}
 
-echo "\n\n====4. 合并${current}分支到${target}分支===="
+echo "\n\n====4. 更新${target}分支===="
+
+git pull origin ${target}
+
+echo "\n\n====5. 合并${current}分支到${target}分支===="
 
 git merge ${current}
 
-echo "\n\n====5. 推送${target}分支到远程仓库===="
+echo "\n\n====6. 推送${target}分支到远程仓库===="
 
 git push origin ${target}
 
-echo "\n\n====6. 切换到${current}分支===="
+echo "\n\n====7. 切换到${current}分支===="
 
 git checkout ${current}
