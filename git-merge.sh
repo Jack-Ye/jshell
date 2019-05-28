@@ -15,7 +15,7 @@ git push origin ${current}
 
 echo "\n\n====3. 删除${target}分支===="
 
-git branch -d ${target}
+git branch -D ${target}
 
 echo "\n\n====4. 切换到${target}分支===="
 
